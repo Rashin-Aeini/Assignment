@@ -1,0 +1,21 @@
+﻿@model Game
+
+
+
+<form method="post" asp-controller="Game" asp-action="Index">
+    <p>you guess @Model.Counter times</p>
+    <div>
+        <label asp-for="Guess"></label>
+        <input type="text" asp-for="Guess" />
+        <span asp-validation-for="Guess" />
+        @if(!string.IsNullOrEmpty(ViewBag.Guess))
+            {
+                <p>@ViewBag.Guess</p>
+            }
+    </div>
+    <div>
+        <button type="submit">
+            Send
+        </button>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+﻿@model List<Game>
+
+@{ 
+    int counter = 0;
+}
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Number</th>
+            <th>Guess Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Game item in Model)
+        {
+        <tr>
+            <td>@counter @{ counter++; }</td>
+            <td>@item.Guess</td>
+            <td>@item.Counter</td>
+        </tr>
+        }
+    </tbody>
+</table>

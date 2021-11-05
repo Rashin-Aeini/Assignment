@@ -1,0 +1,15 @@
+﻿@model Temperature
+
+<form asp-controller="Doctor"
+      asp-action="Index" method="post">
+    <div>
+        <label asp-for="Value"></label>
+        <input asp-for="Value" />
+        <span asp-validation-for="Value"></span>
+    </div>
+    <div>
+        <button type="submit">
+            Send
+        </button>
+    </div>
+</form>
